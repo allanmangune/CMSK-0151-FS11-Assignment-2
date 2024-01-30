@@ -1,5 +1,9 @@
 $().ready(function () {
     setupValidations();
+    setupSubmitButton();
+    $("#contact-form").submit(function(e){
+        e.preventDefault();
+    });
 });
 
 function setupValidations(){
@@ -29,4 +33,18 @@ function setupValidations(){
             }
         }
     });
+}
+
+function scrollToSection(scroll){
+    $(document).scrollTop(scroll);
+}
+
+function setupSubmitButton(){
+    $( "#submit-button" ).click(function() {
+        var form = $( "#contact-form" );
+        if (form.valid()){
+            $( "#submit-button" ).show();  
+            alert("We have received your message. We will contact you soon.");
+        };
+      });
 }

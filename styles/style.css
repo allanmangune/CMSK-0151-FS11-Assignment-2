@@ -26,6 +26,9 @@ section {
     margin-bottom: 45px!important;
 }
 
+.section-header {
+    color: #28518d!important;
+}
 .section-spacer{
     height: 40px;
 }
