@@ -1,3 +1,4 @@
+var validator;
 $().ready(function () {
     setupValidations();
     setupSubmitButton();
@@ -7,7 +8,7 @@ $().ready(function () {
 });
 
 function setupValidations(){
-    $("#contact-form").validate({
+    validator = $("#contact-form").validate({
         rules: {
             firstName: "required",
             lastName: "required",
@@ -43,7 +44,7 @@ function setupSubmitButton(){
     $( "#submit-button" ).click(function() {
         var form = $( "#contact-form" );
         if (form.valid()){
-            $( "#submit-button" ).show();  
+            validator.resetForm(); 
             alert("We have received your message. We will contact you soon.");
         };
       });
