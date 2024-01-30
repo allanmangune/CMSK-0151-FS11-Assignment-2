@@ -1,0 +1,57 @@
+.error{
+    color: red!important;
+}
+
+.banner-text{
+    color:rgb(243, 248, 251)!important;
+}
+
+.fairway{
+    background-image: url("../images/ross-bridge-golf-course-1614987_1920.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.background-dark-green{
+    background-color: #10504a;
+}
+
+.background-light-green{
+    background-color: #ebf6de;
+    padding-bottom: 1rem!important;
+    padding-top: 1rem!important;
+}
+
+section {
+    margin-bottom: 45px!important;
+}
+
+.section-spacer{
+    height: 40px;
+}
+
+.card-contact-us-button{
+    color:rgb(240, 243, 246);
+    width: 100%!important;
+}
+
+.contact-us-button{
+    color:rgb(240, 243, 246);
+    width: 100%!important;
+}
+
+.footer-container{
+    margin-top: 30px!important;
+    margin-bottom: 30px!important;
+}
+.copyright{
+    margin-top: 20px;
+    font-size: .9rem!important;
+    text-align: center!important;
+}
+
+.footer-nav{
+    margin-top: 20px!important;
+    padding-top: 20px!important;
+    background-color:  #ebf6de;
+}
