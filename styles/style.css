@@ -1,3 +1,12 @@
+.main-container{
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "header   header"
+    "content  content"
+    "footer   footer";
+}
+
 .error{
     color: red!important;
 }
