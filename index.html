@@ -7,7 +7,6 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <link href="styles/style.css" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
         <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
     </head>
@@ -46,14 +45,14 @@
                 <div class="fairway position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary">
                   <div class="col-md-6 p-lg-5 mx-auto my-5">
                     <h1 class="display-3 fw-bold banner-text">Failrway Golf Club</h1>
-                    <h3 class="fw-normal text-muted mb-3 banner-text">Connect with nature while playing</h3>
+                    <h3 class="fw-normal text-muted mb-3 banner-text">Connect with nature while playing golf</h3>
                 </div>
             </section>
             <section id="membership">
                 <div class="section-spacer"></div>
                 <div class="container">
                   <div class="p-3 pb-md-4 mx-auto text-center">
-                    <h1 class="display-4 fw-normal text-body-emphasis">Membership</h1>
+                    <h1 class="display-4 fw-normal text-body-emphasis section-header">Membership</h1>
                     <p class="fs-5 text-body-secondary">
                       Join our community and connect with nature while playing golf.  
                     </p>
@@ -71,7 +70,7 @@
                               <li>Free use of club house</li>
                               <li>Can join any tournaments in the golf club</li>
                             </ul>
-                            <button type="button" class="btn btn-lg bg-success card-contact-us-button">Contact us</button>
+                            <button type="button" class="btn btn-lg bg-success card-contact-us-button" onclick="scrollToSection(1590)">Contact us</button>
                           </div>
                         </div>
                       </div>
@@ -87,7 +86,7 @@
                               <li>Free use of club house</li>
                               <li>Can join any tournaments in the golf club</li>
                             </ul>
-                            <button type="button" class="btn btn-lg bg-success card-contact-us-button">Contact us</button>
+                            <button type="button" class="btn btn-lg bg-success card-contact-us-button" onclick="scrollToSection(1590)">Contact us</button>
                           </div>
                         </div>
                       </div>
@@ -103,7 +102,7 @@
                               <li>Free use of club house</li>
                               <li>Can join any tournaments in the golf club</li>
                             </ul>
-                            <button type="button" class="btn btn-lg bg-success card-contact-us-button">Contact us</button>
+                            <button type="button" class="btn btn-lg bg-success card-contact-us-button" onclick="scrollToSection(1590)">Contact us</button>
                           </div>
                         </div>
                       </div>
@@ -114,15 +113,20 @@
                 <div class="section-spacer"></div>
                 <div class="container">
                   <div class="p-3 pb-md-4 mx-auto text-center">
-                    <h1 class="display-4 fw-normal text-body-emphasis">About Us</h1>
+                    <h1 class="display-4 fw-normal text-body-emphasis section-header">About Us</h1>
                   </div>
                   <p>
-                    For over 50 years, our golf course has been the considered the best extension
-                    of our members' backyard. Join our community to experience connecting with nature while playing.
+                    For almost 50 years, our golf course has been regarded as the ideal extension 
+                    of our members' backyards. Our aesthetically pleasing golf course is always 
+                    clean and playable. Join our community and connect with nature while playing.
                   </p>
                   <p>
-                    In this section, the author of this site acknowledge the following technologies and assets used 
-                    in developing this website:
+                    Our clubhouse is located beside the river valley. Our practice facilities are top 
+                    quality and let our members sharpen their abilities before playing in the fairways.
+                  </p>
+                  <p>
+                    In this section, the author acknowledges the 
+                    following technologies and assets utilized in producing this website:
                   </p>
                   <ul>
                     <li>Bootstrap and its example websites</li>
@@ -130,15 +134,18 @@
                     <li>jquery validate</li>
                     <li>Pixabay for image of <a href="https://pixabay.com/photos/ross-bridge-golf-course-golfing-1614987/" target="_blank">Rose Bridge golf course</a></li>
                   </ul>
+                  <p>
+                    The author used Grammarly to correct the grammar and punctuation of the About Us section.
+                  </p>
                 </div>
             </section>
             <section id="contact">
                 <div class="section-spacer"></div>
                 <div class="container">
                   <div class="p-3 pb-md-4 mx-auto text-center">
-                    <h1 class="display-4 fw-normal text-body-emphasis">Contact Us</h1>
+                    <h1 class="display-4 fw-normal text-body-emphasis section-header">Contact Us</h1>
                   </div>
-                    <form autocomplete="off" id="contact-form" method="POST">
+                    <form autocomplete="off" id="contact-form"  method="POST">
                       <div class="row g-3">
                         <div class="col-sm-6">
                           <label for="firstName" class="form-label">First name</label>
@@ -165,8 +172,16 @@
                         </div>
                       </div>
                       <hr class="my-4">
-                      <button class="w-100 btn bg-success btn-lg contact-us-button" type="submit">Contact</button>
+                      <button class="w-100 btn bg-success btn-lg contact-us-button" id="submit-button" type="submit">Contact</button>
                     </form>
+                </div>
+                <div id="toast" class="toast align-items-center text-white bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+                  <div class="d-flex">
+                    <div class="toast-body">
+                      We received your message. We'll reach out soon.
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                  </div>
                 </div>
             </section>
         </main>
